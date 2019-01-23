@@ -1,0 +1,100 @@
+<html>
+  <!-- This program is a co-op multiplayer game heavily inspired off of the game, "Keep Talking and Nobody Explodes" by Steel Crate Games.
+	authors: Tommy Chao, Sheldon Dong, Nghiep La
+	date: 5/24/16
+
+	IF START MENU IS NOT DISPLAYING EVERYTHING CORRECTLY AND PROPERLY, ZOOM OUT
+-->
+	<head>
+		<title>Keep Talking and Nobody Explodes</title>
+   	<link rel="stylesheet" type="text/css" href="css.css">
+		<link rel = "stylesheet" type = "text/css" href = "Menu.css">
+    	
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+		<script src="jquery.txt"></script>
+		<script src="BombBoxObject.txt"></script>
+		<script src="StrikeBoxObject.txt"></script>
+		<script src="Timer.txt"></script>
+		<script src="CheckboxObject.txt"></script>
+		<script src="CorrectShapeObject.txt"></script>
+		<script src="ScrambledLettersObject.txt"></script>
+		<script src="CollectionObject.txt"></script>
+		<script src="soundgame.txt"></script>
+		<script src="main.txt"></script>
+		
+  </head>
+  <body id = 'body'>
+  	<audio id="sound1" src="sound1.mp3" type="audio/mp3" preload="auto"> </audio>
+    <audio id="sound2" src="sound2.mp3" type="audio/mp3" preload="auto"> </audio>
+    <audio id="sound3" src="sound3.mp3" type="audio/mp3" preload="auto"> </audio>
+    <audio id="sound4" src="sound4.wav" type="audio/wav" preload="auto"> </audio>
+    <audio id="sound5" src="sound5.wav" type="audio/wav" preload="auto"> </audio>
+    
+    <div id="menu">
+		<h1 class="menus">Keep Talking and Nobody Explodes</h1>
+		<br><br><br>
+		<!-- <h2 class="menus" style="cursor:pointer" onclick="initializeGame();">PLAY GAME</h2> -->
+		<h2 class="menus" style="cursor:pointer" onclick="displayCountdown();">PLAY GAME</h2>
+		<h2 class="menus" style="cursor:pointer" onclick="showInstructions();">INSTRUCTIONS <i><b style="color:red">(READ FIRST!)</b></i></h2>
+		<h2 class="menus" style="cursor:pointer" onclick="showCredits();">CREDITS</h2>
+	</div>
+		
+	<div id="instructions">
+		<div id="instructionMenu">
+			<h1>INSTRUCTIONS</h1>
+			<div class="words">This game requires at least <i><b style="color:red">two</b></i> players; one player as the defuser and at least one player as the manual expert(s).
+				<br>The defuser is <i><b style="color:red">not</b></i> allowed to read the manual and the manual expert(s) may <i><b style="color:red">not</b></i> look at the bomb.
+				<br><br>The defuser and manual expert(s) must communicate <i><b style="color:red">verbally</b></i> and work together to solve and defuse the bomb.
+				<br>The defuser is given <i><b style="color:red">3 minutes</b></i> and <i><b style="color:red">two</b></i> strikes to defuse a randomized bomb before the bomb detonates. 
+				<br><br>The manual expert(s) may look over the manual before the defuser starts the game.
+				<br>Communication may <i><b style="color:red">not</b></i> start until the game is started.
+				<br><br><p id="volumeChecker" style="position:absolute; left:28%;">
+					Click <i><b style="color:gold; font-size:30; cursor:pointer" onclick=testAudio()>THIS</b></i> and make sure it is at an audible and comfortable volume.
+				</p>
+			</div>
+		</div>
+		<h2 class="backButton" style="cursor:pointer" onclick="backMenu();">BACK</h2>
+	</div>
+	
+	<div id="credits">
+		<div id="creditsMenu">
+			<h1>CREDITS</h1>
+			<div class="title">GAME DEVELOPERS:</div>
+			<br><br>
+			<div class="words">TOMMY CHAO</div>
+			<div class="words">SHELDON DONG</div>
+			<div class="words">NGHIEP LA</div>
+		</div>
+		<h2 class="backButton" style="cursor:pointer" onclick="backMenu();">BACK</h2>
+	</div>
+	
+	<div id="countdown">
+		<div id="countdownMenu">
+			<h1 id="countdownWords">Starting in 3 seconds...</h1>
+			<br><br>
+			<div class="words"><i><b style="color:red">Only</b></i> the defuser may look at this screen.</div>
+		</div>
+	</div>
+	
+	<div id="victoryScreen">
+		<div id="victoryScreenMenu">
+			<h1 id="victoryScreenWords">You defused the bomb! You win!</h1>
+			<br><br>
+			<div class="words">Your time left was <i><b id="victoryTime" style="color:red"> </b></i> and you had <i><b id="victoryStrikes" style="color:red"> </b></i> strike(s).</div>
+			<h2 class="backVictoryAndDetonateButtons" style="cursor:pointer" onclick="backMenu();">BACK</h2>
+		</div>
+	</div>
+	
+	<div id="detonateScreen">
+		<div id="detonateScreenMenu">
+			<h1 id="detonateScreenWords">The bomb detonated! You lose...</h1>
+			<br><br>
+			<div class="words">Your time left was <i><b id="detonateTime" style="color:red"> </b></i> and you had <i><b id="detonateStrikes" style="color:red"> </b></i> strike(s).</div>
+			<br>
+			<h2 class="backVictoryAndDetonateButtons" style="cursor:pointer" onclick="backMenu();">BACK</h2>
+		</div>
+	</div>
+	
+    <div id = "renderArea"></div>
+  </body>
+</html>

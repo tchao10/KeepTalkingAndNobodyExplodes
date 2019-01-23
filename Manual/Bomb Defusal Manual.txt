@@ -1,0 +1,125 @@
+     / \                                                              / \     
+    /   \                                                            /   \    
+   /  |  \      The defuser may NOT look at this manual!            /  |  \   
+  /   |   \     ONLY the manual expert may look at the manual.     /   |   \  
+ /    .    \                                                      /    .    \ 
+/___________\                                                    /___________\
+
+
+
+
+SCRAMBLED LETTERS (green module)
+
+    Warning! This module is case-sensitive! The defuser must type the decrypted text in ALL LOWERCASE.
+    
+    Key:
+        a  <-->  n
+        b  <-->  o
+        c  <-->  p
+        d  <-->  q
+        e  <-->  r
+        f  <-->  s
+        g  <-->  t
+        h  <-->  u
+        i  <-->  v
+        j  <-->  w
+        k  <-->  x
+        l  <-->  y
+        m  <-->  z
+
+
+
+
+
+SOUND (red module)
+
+    Syntax: sound you hear --> box to click
+    You can only hear the sound once! Listen carefully
+    
+    Key:
+        Cat --> Solve this question (5^2+11) / ((2^2)*(3))
+		Guitar Note  --> Synonym with 'end'
+		Piano --> Something that rhyme with 'score'
+		Dog Bark --> What noise does the train make?
+        Cow --> Read the code
+            var loc
+            var reverse = function(s) {
+                return s.split("").reverse().join("");
+            }
+            var boxLocation = {
+            	string1: "t",
+            	string2: "s",
+            	string3: reverse("rif"),
+            	position: function(preference) {
+            		return preference + "Your Box: " + this.string3 + this.string2 + this.string1; <-- Your answer
+            	},
+            }
+            boxLocation.position(loc);  
+	
+
+
+
+
+CORRECT SHAPE (blue module)
+    
+    The defuser must click one of the three shapes depending on which shape is outlined.
+    
+    Syntax: shape/border color --> shape to click
+    
+    Key:
+        circle/green --> rectangle
+        circle/pink --> square
+        circle/red --> circle
+        circle/black --> square
+        
+        square/green --> rectangle
+        square/pink --> square
+        square/red --> circle
+        square/black --> rectangle
+        
+        rectangle/green --> rectangle
+        rectangle/pink --> square
+        rectangle/red --> circle
+        rectangle/black --> square
+
+
+
+
+
+COLLECTION (orange/yellow module)
+    
+    The defuser controls the "character" (the dashed square in the middle).
+    The defuser must collect one key (the CIRCLES) and then exit through one of the exits (the SQUARES)
+
+    Key:
+        GREEN character color:
+        
+            2 keys displayed initially: Collect the 'CYAN' key.
+            3 keys displayed initially: Collect the 'RED' key.
+            4 keys displayed initially: Collect the 'ORANGE' key.
+            
+            2 exits displayed initially: Exit though the 'SPRING GREEN' exit.
+            3 exits displayed initially: Exit though the 'PURPLE' exit.
+            4 exits displayed initially: Exit though the 'RED' exit.
+            
+            
+        BLUE character color:
+        
+            2 keys displayed initially: Collect the 'RED' key.
+            3 keys displayed initially: Collect the 'ORANGE' key.
+            4 keys displayed initially: Collect the 'GREEN' key.
+            
+            2 exits displayed initially: Exit though the 'SPRING GREEN' exit.
+            3 exits displayed initially: Exit though the 'RED' exit.
+            4 exits displayed initially: Exit though the 'ORANGE' exit.
+            
+            
+        PURPLE character color:
+        
+            2 keys displayed initially: Collect the 'CYAN' key.
+            3 keys displayed initially: Collect the 'ORANGE' key.
+            4 keys displayed initially: Collect the 'GREEN' key.
+            
+            2 exits displayed initially: Exit though the 'RED' exit.
+            3 exits displayed initially: Exit though the 'ORANGE' exit.
+            4 exits displayed initially: Exit though the 'PURPLE' exit.
